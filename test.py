@@ -1,0 +1,152 @@
+import turtle as t
+import random as r
+def biulding():
+    t.speed(0)
+    t.up()
+    t.goto(-900, 0)
+    t.down()
+    for i in range(15):
+        t.colormode(255)
+        t.color(r.randint(0,255), r.randint(0,255), r.randint(0,255))
+        t.begin_fill()
+        t.fd(100)
+        t.left(90)
+        t.fd(300)
+        t.left(90)
+        t.fd(100)
+        t.left(90)
+        t.fd(300)
+        t.left(90)
+        t.end_fill()
+        
+        
+        t.up()
+        t.fd(20)
+        t.left(90)
+        t.fd(20)
+        t.down()
+        t.color("cyan")
+        t.begin_fill()
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.left(90)
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.end_fill()
+        t.up()
+        t.fd(20)
+        t.down()
+        t.color("cyan")
+        t.begin_fill()
+        t.fd(10)
+        t.left(90)
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.left(90)
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.end_fill()
+        t.up()
+        t.fd(20)
+        t.down()
+        t.color("cyan")
+        t.begin_fill()
+        t.fd(10)
+        t.left(90)
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.left(90)
+        t.fd(260)
+        t.left(90)
+        t.fd(10)
+        t.end_fill()
+        t.up()
+        t.fd(20)
+        t.right(90)
+        t.fd(20)
+        t.left(90)
+        t.down()
+
+        t.up()
+        t.fd(20)
+        t.down()
+
+def bg():
+    t.speed(10)
+    t.bgcolor("blue")
+    t.pencolor("green")
+    t.color("green")
+    t.begin_fill()
+    t.goto(-1000, 0)
+    t.goto(-1000,-1000)
+    t.goto(1000, -1000)
+    t.goto(1000, 0)
+    t.goto(0,0)
+    t.end_fill()
+
+def start():
+    x=r.randint(-1000, 1000)
+    y=r.randint(50, 500)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.color("yellow")
+    t.begin_fill()
+    t.circle(5)
+    t.end_fill()
+
+def sapin():
+    t.colormode(255)
+    couleur = "brown"
+    t.color(couleur)
+    t.begin_fill()
+    for i in range(3):
+        t.fd(10)
+        t.left(90)
+        t.fd(30)
+        t.left(90)
+    t.end_fill()
+
+    t.up()
+    t.fd(20)
+    t.down()
+    t.left(-120)
+    for j in range(3):
+        t.color(120, 194, 64)
+        t.begin_fill()
+        for x in range(3):
+            t.fd(30)
+            t.right(120)
+        t.end_fill()
+
+        t.fd(30)
+        t.up()
+        t.left(120)
+        t.fd(15)
+        t.down()
+        t.right(120)
+    
+    t.right(60)
+
+bg()
+for i in range(100):
+    start()
+
+
+biulding()
+
+for i in range(15):
+    t.up()
+    x=r.randint(-800,800)
+    y=r.randint(-300,0)
+    t.goto(x,y)
+    t.down()
+    #sapin()
+
+while(True):
+    pass
