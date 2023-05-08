@@ -2,8 +2,11 @@ import turtle as t
 import random as r
 def biulding():
     t.speed(0)
+    t.pensize(1)
     t.up()
-    t.goto(-900, 0)
+    t.goto(-900, 100)
+    print(t.heading())
+    t.right(180)
     t.down()
     for i in range(15):
         t.colormode(255)
@@ -89,16 +92,7 @@ def bg():
     t.goto(0,0)
     t.end_fill()
 
-def start():
-    x=r.randint(-1000, 1000)
-    y=r.randint(50, 500)
-    t.penup()
-    t.goto(x,y)
-    t.pendown()
-    t.color("yellow")
-    t.begin_fill()
-    t.circle(5)
-    t.end_fill()
+
 
 def sapin():
     t.colormode(255)
@@ -133,20 +127,53 @@ def sapin():
     
     t.right(60)
 
-bg()
-for i in range(100):
-    start()
+def road():
+    t.speed(0)
+    t.goto(-1000, 0)
+    t.color("grey")
+    t.begin_fill()
+    t.fd(2000)
+    t.left(90)
+    t.fd(100)
+    t.left(90)
+    t.fd(2000)
+    t.left(90)
+    t.fd(100)
+    t.end_fill()
+    t.up()
+    t.backward(10)
+    t.left(90)
+    t.fd(10)
+    t.down()
+    t.color("black")
+    t.begin_fill()
+    t.fd(1980)
+    t.left(90)
+    t.fd(80)
+    t.left(90)
+    t.fd(1980)
+    t.fd(80)
+    t.end_fill()
+    t.up()
+    t.pencolor("white")
+    t.pensize(10)
+    t.goto(-1000, 50)
+    t.down()
+    t.goto(1000, 50)
 
+
+bg()
+road()
 
 biulding()
 
-for i in range(15):
+for i in range(100):
     t.up()
     x=r.randint(-800,800)
-    y=r.randint(-300,0)
+    y=r.randint(-500,-100)
     t.goto(x,y)
     t.down()
-    #sapin()
+    sapin()
 
 while(True):
     pass
